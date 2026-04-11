@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessie Wang | Model & Content Creator | London</title>
+    <meta name="description" content="London-based model and content creator. Charlotte Tilbury, Lancôme, Canon. Skincare, beauty, and lifestyle.">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231A1714'/%3E%3Crect x='3' y='3' width='42' height='42' rx='6' fill='none' stroke='%238B6F47' stroke-width='0.75'/%3E%3Ctext x='24' y='31' font-family='Georgia,Times,serif' font-size='22' font-weight='bold' fill='%23F5F0EA' text-anchor='middle'%3EJW%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://jessieyoyo.com/">
+
+    <!-- Open Graph / WhatsApp / Social Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jessieyoyo.com/">
+    <meta property="og:title" content="Jessie Wang | Model & Content Creator | London">
+    <meta property="og:description" content="Professional model and skincare content creator based in London. Collaborating with Charlotte Tilbury, Lancôme, Canon, and Le Chameau.">
+    <meta property="og:image" content="https://jessieyoyo.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jessie Wang | Model & Content Creator | London">
+    <meta name="twitter:description" content="Professional model and skincare content creator based in London. Charlotte Tilbury · Lancôme · Canon · Le Chameau.">
+    <meta name="twitter:image" content="https://jessieyoyo.com/images/og-image.jpg">
+
+    <!-- Mobile Web App -->
+    <meta name="theme-color" content="#1A1714">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Jessie Wang">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #F5F0EA; --cream-dark: #EBE4DB; --sand: #D4C8B8;
+            --leather: #8B6F47; --leather-light: #A6895E; --chocolate: #5C4A32;
+            --dark: #1A1714; --dark-warm: #2C2520; --text: #2C2520;
+            --text-mid: #6B5E52; --text-light: #9B8E80; --white: #FDFCFA;
+            --border: #D4C8B8; --rose: #C4A882; --blush: #E8D5C4;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif; background: var(--cream);
+            color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { display: block; max-width: 100%; }
+        button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+        /* ═══ CURSOR ═══ */
+        .cursor {
+            width: 20px; height: 20px; border: 1.5px solid var(--dark); border-radius: 50%;
+            position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+            transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
+            transform: translate(-50%, -50%); mix-blend-mode: difference;
+        }
+        .cursor.h { width: 50px; height: 50px; background: rgba(255,255,255,0.15); border-color: #fff; }
+
+        /* ═══ LOADER ═══ */
+        .loader {
+            position: fixed; inset: 0; z-index: 10000;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--dark); transition: opacity 0.8s ease, visibility 0.8s;
+        }
+        .loader.done { opacity: 0; visibility: hidden; }
+        .loader-inner { text-align: center; color: var(--cream); }
+        .loader-monogram {
+            font-family: 'Bodoni Moda', serif; font-size: 5rem; font-weight: 400;
+            letter-spacing: 0.3em; opacity: 0; animation: fi 0.8s ease 0.2s forwards;
+        }
+        .loader-line { width: 0; height: 1px; background: var(--leather-light); margin: 1.5rem auto 0; animation: ll 1.2s ease 0.6s forwards; }
+        .loader-sub { font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--text-light); opacity: 0; margin-top: 1rem; animation: fi 0.6s ease 1s forwards; }
+
+        @keyframes fi { to { opacity: 1; } }
+        @keyframes ll { to { width: 80px; } }
+        @keyframes su { to { transform: translateY(0); } }
+
+        /* ═══ SCROLL PROGRESS ═══ */
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--leather), var(--rose)); z-index: 10001; width: 0%; }
+
+        /* ═══ NAV ═══ */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.4s ease;
+        }
+        .nav.scrolled { padding: 1rem 3rem; background: rgba(245,240,234,0.92); backdrop-filter: blur(20px); }
+        .nav-logo { font-family: 'Bodoni Moda', serif; font-size: 1.1rem; letter-spacing: 0.2em; font-weight: 400; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a {
+            font-size: 0.7rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--text-mid); transition: color 0.3s; position: relative;
+        }
+        .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--leather); transition: width 0.4s ease; }
+        .nav-links a:hover { color: var(--dark); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+            padding: 0.65rem 1.8rem; border: 1px solid var(--dark); color: var(--dark);
+            transition: all 0.3s; display: inline-block;
+        }
+        .nav-cta:hover { background: var(--dark); color: var(--cream); }
+
+        .nav-menu-btn { display: none; width: 28px; height: 20px; position: relative; z-index: 1001; }
+        .nav-menu-btn span { display: block; width: 100%; height: 1.5px; background: var(--dark); position: absolute; left: 0; transition: all 0.4s ease; }
+        .nav-menu-btn span:nth-child(1) { top: 0; }
+        .nav-menu-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .nav-menu-btn span:nth-child(3) { bottom: 0; }
+        .nav-menu-btn.open span:nth-child(1) { top: 50%; transform: rotate(45deg) translateY(-50%); }
+        .nav-menu-btn.open span:nth-child(2) { opacity: 0; }
+        .nav-menu-btn.open span:nth-child(3) { bottom: 50%; transform: rotate(-45deg) translateY(50%); }
+
+        .mobile-menu {
+            position: fixed; inset: 0; background: var(--cream); z-index: 999;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+        }
+        .mobile-menu.open { opacity: 1; pointer-events: all; }
+        .mobile-menu-links { list-style: none; text-align: center; display: flex; flex-direction: column; gap: 1.5rem; }
+        .mobile-menu-links a { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; font-weight: 400; color: var(--dark); }
+
+        /* ═══ SHARED ═══ */
+        .stag {
+            font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+            color: var(--leather); margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 1rem;
+        }
+        .stag::before { content: ''; width: 30px; height: 1px; background: var(--leather); }
+        .stitle { font-family: 'Bodoni Moda', serif; font-weight: 400; line-height: 1.15; }
+        .stitle em { font-style: italic; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;
+            padding: 1.1rem 2.8rem; border: 1px solid var(--dark); color: var(--dark);
+            position: relative; overflow: hidden; transition: color 0.4s ease;
+        }
+        .btn::before { content: ''; position: absolute; inset: 0; background: var(--dark); transform: translateY(101%); transition: transform 0.4s ease; }
+        .btn:hover { color: var(--cream); }
+        .btn:hover::before { transform: translateY(0); }
+        .btn span { position: relative; z-index: 1; }
+
+        /* ═══ FOCUS ═══ */
+        :focus-visible { outline: 2px solid var(--leather); outline-offset: 3px; }
+        button:focus-visible, a:focus-visible { outline: 2px solid var(--leather); outline-offset: 3px; }
+
+        .rv { opacity: 0; transform: translateY(35px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .rv.v { opacity: 1; transform: translateY(0); }
+        .rv.d1 { transition-delay: 0.1s; } .rv.d2 { transition-delay: 0.2s; }
+        .rv.d3 { transition-delay: 0.3s; } .rv.d4 { transition-delay: 0.4s; }
+
+        /* ═══ HERO ═══ */
+        .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+        .hero-left {
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 8rem 5rem 4rem 5rem; position: relative; z-index: 2;
+        }
+        .hero-eyebrow {
+            font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase;
+            color: var(--leather); margin-bottom: 2rem; overflow: hidden;
+        }
+        .hero-eyebrow span { display: inline-block; transform: translateY(100%); animation: su 0.8s ease 1.8s forwards; }
+        .hero-title { font-family: 'Bodoni Moda', serif; font-weight: 400; line-height: 0.95; letter-spacing: -0.02em; }
+        .hero-title .line { display: block; overflow: hidden; }
+        .hero-title .line span { display: inline-block; transform: translateY(110%); }
+        .hl1 span { font-size: clamp(4rem,9.5vw,9.2rem); animation: su 1s ease 2s forwards; }
+        .hl2 span { font-size: clamp(4rem,9.5vw,9.2rem); font-style: italic; animation: su 1s ease 2.15s forwards; }
+        .hero-sub {
+            margin-top: 2rem; font-size: 0.88rem; font-weight: 300;
+            color: var(--text-mid); line-height: 1.8; max-width: 380px;
+            opacity: 0; animation: fi 1s ease 2.5s forwards;
+        }
+        .hero-cta-row { margin-top: 2.5rem; display: flex; gap: 1.5rem; opacity: 0; animation: fi 1s ease 2.7s forwards; }
+        .btn-ghost { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400; padding: 1.1rem 2rem; color: var(--text-mid); transition: color 0.3s; }
+        .btn-ghost:hover { color: var(--dark); }
+
+        .hero-right { position: relative; overflow: hidden; }
+        .hero-image-container { position: absolute; inset: 0; }
+        .hero-image-container img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: saturate(0.95) contrast(1.12) brightness(0.94);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+        @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.06); } }
+
+        /* Gold shimmer on italic hero text */
+        .hl2 span {
+            background: linear-gradient(135deg, var(--leather-light) 0%, var(--rose) 35%, var(--leather) 50%, var(--rose) 65%, var(--leather-light) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: su 1s ease 2.15s forwards, shimmer 6s linear 3s infinite;
+        }
+        @keyframes shimmer { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .hero-image-container img { transform: scale(1) !important; }
+            .hl2 span { -webkit-text-fill-color: var(--dark); background: none; }
+            .rv { opacity: 1; transform: none; }
+            .hero-title .line span { transform: none; }
+            .hero-eyebrow span { transform: none; }
+            .hero-sub, .hero-cta-row { opacity: 1; }
+            .loader { display: none; }
+            .loader-monogram, .loader-sub { opacity: 1; }
+            .mtrack { animation: none; }
+        }
+        .hero-image-overlay {
+            position: absolute; inset: 0;
+            background:
+                linear-gradient(to right, var(--cream) 0%, transparent 15%),
+                linear-gradient(to top, rgba(20,18,15,0.35) 0%, transparent 35%),
+                radial-gradient(ellipse at 70% 40%, transparent 40%, rgba(20,18,15,0.22) 100%);
+        }
+        .hero-image-grain {
+            position: absolute; inset: 0; opacity: 0.14; pointer-events: none; mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        /* Global film grain across the entire page */
+        .page-grain {
+            position: fixed; inset: 0; pointer-events: none; z-index: 9998;
+            opacity: 0.045; mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        .hero-scroll {
+            position: absolute; bottom: 2.5rem; left: 5rem; z-index: 5;
+            display: flex; align-items: center; gap: 1rem;
+            opacity: 0; animation: fi 1s ease 3s forwards;
+        }
+        .hero-scroll-line { width: 40px; height: 1px; position: relative; overflow: hidden; }
+        .hero-scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--leather); animation: scrollL 2s ease infinite; }
+        @keyframes scrollL { 0% { left: -100%; } 50% { left: 0; } 100% { left: 100%; } }
+        .hero-scroll span { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-light); }
+
+        /* ═══ MARQUEE ═══ */
+        .marquee {
+            padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            overflow: hidden; background: var(--cream);
+        }
+        .mtrack { display: flex; width: max-content; animation: mq 35s linear infinite; }
+        .mtrack:hover { animation-play-state: paused; }
+        .mitem { display: flex; align-items: center; gap: 2.8rem; padding: 0 2.8rem; white-space: nowrap; }
+        .mitem span { font-family: 'Bodoni Moda', serif; font-size: 1.2rem; font-weight: 400; letter-spacing: 0.06em; color: var(--dark); font-style: italic; }
+        .mdot { width: 5px; height: 5px; background: var(--leather); border-radius: 50%; flex-shrink: 0; }
+        @keyframes mq { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* ═══ ABOUT ═══ */
+        .about { padding: 8rem 3rem; max-width: 1400px; margin: 0 auto; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+        .about-image { position: relative; }
+        .about-image-inner { aspect-ratio: 3/4; overflow: hidden; position: relative; }
+        .about-image-inner img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85); transition: transform 8s ease; }
+        .about-image-inner:hover img { transform: scale(1.06); }
+        .about-image-reveal { position: absolute; inset: 0; background: var(--cream); transform-origin: right; transition: transform 1.2s ease; }
+        .about-image.revealed .about-image-reveal { transform: scaleX(0); }
+        .about-image-accent { position: absolute; bottom: -20px; right: -20px; width: 180px; height: 180px; border: 1px solid var(--border); z-index: -1; }
+        .about-text h2 { font-size: clamp(2.5rem,4vw,3.8rem); margin-bottom: 2rem; }
+        .about-text p { font-size: 0.88rem; font-weight: 300; color: var(--text-mid); line-height: 1.9; margin-bottom: 1.25rem; }
+        .about-stats { display: flex; gap: 3.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+        .stat-val { font-family: 'Bodoni Moda', serif; font-size: 2.8rem; font-weight: 400; color: var(--dark); line-height: 1; }
+        .stat-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-top: 0.4rem; }
+
+        /* ═══ JOURNEY ═══ */
+        .journey { padding: 5rem 3rem 7rem; background: var(--cream-dark); overflow: hidden; }
+        .journey-inner { max-width: 1200px; margin: 0 auto; }
+        .journey-header { text-align: center; margin-bottom: 4rem; }
+        .journey-header h2 { font-size: clamp(2.2rem,3.5vw,3rem); }
+        .timeline { display: flex; position: relative; padding: 3rem 0 0; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--border); }
+        .timeline-item { flex: 1; padding: 0 1.5rem; position: relative; text-align: center; }
+        .timeline-item::before {
+            content: ''; position: absolute; top: -3rem; left: 50%; transform: translateX(-50%);
+            width: 10px; height: 10px; border-radius: 50%; background: var(--cream-dark); border: 2px solid var(--leather);
+            transition: background 0.3s;
+        }
+        .timeline-item:hover::before { background: var(--leather); }
+        .timeline-year { font-family: 'Bodoni Moda', serif; font-size: 2rem; font-weight: 400; color: var(--sand); margin-bottom: 0.5rem; transition: color 0.3s; }
+        .timeline-item:hover .timeline-year { color: var(--leather); }
+        .timeline-title { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.3rem; }
+        .timeline-desc { font-size: 0.75rem; color: var(--text-light); line-height: 1.6; }
+
+        /* ═══ PROCESS ═══ */
+        .process { padding: 8rem 3rem; background: var(--cream); }
+        .process-inner { max-width: 1100px; margin: 0 auto; }
+        .process-header { text-align: center; margin-bottom: 5rem; }
+        .process-header h2 { font-size: clamp(2.2rem,3.5vw,3rem); }
+        .process-header p { font-size: 0.88rem; color: var(--text-mid); font-weight: 300; max-width: 500px; margin: 1rem auto 0; line-height: 1.8; }
+        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+        .process-steps::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 1px; background: var(--border); }
+        .process-step { text-align: center; padding: 0 1.5rem; position: relative; }
+        .step-num {
+            width: 80px; height: 80px; border-radius: 50%; border: 1px solid var(--border);
+            background: var(--cream); display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 2rem; position: relative; z-index: 1; transition: all 0.4s;
+        }
+        .step-num span { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; color: var(--sand); transition: color 0.4s; }
+        .process-step:hover .step-num { border-color: var(--leather); background: var(--dark); }
+        .process-step:hover .step-num span { color: var(--cream); }
+        .process-step h3 { font-family: 'Bodoni Moda', serif; font-size: 1.3rem; font-weight: 500; margin-bottom: 0.75rem; }
+        .process-step p { font-size: 0.78rem; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
+
+        /* ═══ PORTFOLIO (Masonry) ═══ */
+        .portfolio { padding: 8rem 3rem; background: var(--dark); }
+        .portfolio-inner { max-width: 1400px; margin: 0 auto; }
+        .portfolio-header { margin-bottom: 4rem; }
+        .portfolio .stag { color: var(--leather-light); }
+        .portfolio .stag::before { background: var(--leather-light); }
+        .portfolio h2 { font-size: clamp(2.5rem,4vw,3.5rem); color: var(--cream); }
+
+        .masonry { columns: 3; column-gap: 1.5rem; }
+        .masonry-item {
+            break-inside: avoid; margin-bottom: 1.5rem; position: relative;
+            overflow: hidden; cursor: pointer;
+        }
+        .masonry-item img {
+            width: 100%; display: block; filter: saturate(0.92) brightness(0.97) contrast(1.08);
+            transition: all 0.8s ease;
+        }
+        .masonry-item { transition: transform 0.5s ease, box-shadow 0.5s ease; }
+        .masonry-item:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(26,23,20,0.32); }
+        .masonry-item:hover img { filter: saturate(1.05) brightness(1.02) contrast(1.05); transform: scale(1.03); }
+        .masonry-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(26,23,20,0.75) 0%, transparent 50%);
+            opacity: 0; transition: opacity 0.5s; display: flex; flex-direction: column;
+            justify-content: flex-end; padding: 1.5rem;
+        }
+        .masonry-item:hover .masonry-overlay { opacity: 1; }
+        .masonry-overlay h3 { font-family: 'Bodoni Moda', serif; font-size: 1.2rem; color: var(--cream); font-weight: 400; }
+        .masonry-overlay p { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sand); margin-top: 0.2rem; }
+        .video-tile video {
+            width: 100%; display: block; filter: saturate(0.92) brightness(0.97) contrast(1.08);
+            transition: all 0.8s ease;
+        }
+        .video-tile:hover video { filter: saturate(1.05) brightness(1.02) contrast(1.05); transform: scale(1.03); }
+        .live-badge {
+            position: absolute; top: 12px; right: 12px; z-index: 2;
+            background: rgba(20,18,15,0.55); color: var(--cream);
+            font-size: 0.58rem; letter-spacing: 0.18em; font-weight: 500;
+            padding: 5px 9px 5px 8px; text-transform: uppercase;
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            display: flex; align-items: center; gap: 5px;
+            border: 1px solid rgba(245,240,234,0.18);
+        }
+        .live-badge span {
+            width: 5px; height: 5px; border-radius: 50%;
+            background: #ff3b30; display: block;
+            animation: livePulse 2s ease-in-out infinite;
+        }
+        @keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+        /* ═══ SVG ILLUSTRATIONS ═══ */
+
+        /* ═══ SHOWREEL ═══ */
+        .showreel { padding: 8rem 3rem; background: var(--dark-warm); text-align: center; position: relative; overflow: hidden; }
+        .showreel-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Bodoni Moda', serif; font-size: clamp(6rem,15vw,14rem); font-weight: 400; color: rgba(255,255,255,0.03); white-space: nowrap; pointer-events: none; }
+        .showreel-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+        .showreel .stag { color: var(--leather-light); }
+        .showreel .stag::before { background: var(--leather-light); }
+        .showreel h2, .showreel .stitle { font-size: clamp(2.5rem,5vw,4rem); color: var(--cream); margin-bottom: 1.5rem; }
+        .showreel p { font-size: 0.88rem; color: var(--text-light); font-weight: 300; line-height: 1.8; margin-bottom: 3rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .showreel-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; text-align: left; }
+        .showreel-text p { margin-left: 0; }
+        .showreel-vid {
+            aspect-ratio: 9/16; position: relative; overflow: hidden; max-width: 340px;
+            margin: 0 auto; border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
+        }
+        .showreel-vid video {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .showreel-vid-overlay {
+            position: absolute; inset: 0; pointer-events: none;
+            background: linear-gradient(to bottom, rgba(26,23,20,0.15) 0%, transparent 20%, transparent 80%, rgba(26,23,20,0.25) 100%);
+        }
+        .showreel-badge {
+            position: absolute; top: 1rem; left: 1rem; z-index: 5;
+            font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--cream); background: rgba(26,23,20,0.6); backdrop-filter: blur(10px);
+            padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);
+        }
+        .showreel-stats { display: flex; gap: 3rem; margin-top: 2.5rem; }
+        .showreel-stat-val { font-family: 'Bodoni Moda', serif; font-size: 2.2rem; color: var(--cream); line-height: 1; }
+        .showreel-stat-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-top: 0.4rem; }
+
+        /* ═══ SERVICES ═══ */
+        .services { padding: 8rem 3rem; background: var(--cream); }
+        .services-inner { max-width: 1100px; margin: 0 auto; }
+        .services-header { text-align: center; margin-bottom: 5rem; }
+        .services-header h2 { font-size: clamp(2.5rem,4vw,3.5rem); }
+
+        .service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 3rem 0; border-top: 1px solid var(--border); align-items: center; }
+        .service-row:nth-child(even) .service-content { order: -1; }
+        .service-visual { aspect-ratio: 4/3; position: relative; overflow: hidden; border: 1px solid var(--border); background: var(--cream-dark); }
+        .service-visual svg { width: 100%; height: 100%; }
+        .service-row:hover .service-visual { border-color: var(--leather); }
+        .service-content .snum { font-family: 'Bodoni Moda', serif; font-size: 3rem; color: var(--sand); line-height: 1; margin-bottom: 1rem; transition: color 0.3s; }
+        .service-row:hover .snum { color: var(--leather); }
+        .service-content h3 { font-family: 'Bodoni Moda', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 1rem; }
+        .service-content p { font-size: 0.85rem; font-weight: 300; color: var(--text-mid); line-height: 1.8; margin-bottom: 1rem; }
+        .sfeatures { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .sfeatures li { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leather); border: 1px solid var(--sand); padding: 0.3rem 0.8rem; }
+
+        /* ═══ VIDEOS ═══ */
+        .videos { padding: 8rem 3rem; background: var(--cream-dark); }
+        .videos-inner { max-width: 1200px; margin: 0 auto; }
+        .videos-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
+        .videos-header h2 { font-size: clamp(2.5rem,4vw,3.5rem); }
+        .videos-header > a { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mid); border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; transition: all 0.3s; }
+        .videos-header > a:hover { color: var(--dark); border-color: var(--dark); }
+
+        .vtabs { display: flex; gap: 1.5rem; margin-bottom: 3rem; }
+        .vtab { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); padding: 0.5rem 0; border-bottom: 1.5px solid transparent; cursor: pointer; transition: all 0.3s; }
+        .vtab.active, .vtab:hover { color: var(--dark); border-bottom-color: var(--leather); }
+
+        .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .vcard { position: relative; overflow: hidden; cursor: pointer; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .vcard:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(26,23,20,0.12); }
+        .vthumb { aspect-ratio: 9/16; overflow: hidden; position: relative; }
+        .vthumb img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8); transition: all 0.8s ease; }
+        .vcard:hover .vthumb img { transform: scale(1.05); filter: saturate(1); }
+        .vplay {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            width: 56px; height: 56px; border-radius: 50%; background: rgba(253,252,250,0.92);
+            display: flex; align-items: center; justify-content: center; transition: all 0.4s; backdrop-filter: blur(10px);
+        }
+        .vplay svg { width: 16px; height: 16px; fill: var(--dark); margin-left: 2px; }
+        .vcard:hover .vplay { transform: translate(-50%,-50%) scale(1.15); }
+        .vmeta { padding: 1.25rem 0 0; }
+        .vmeta h4 { font-family: 'Bodoni Moda', serif; font-size: 1.1rem; font-weight: 400; }
+        .vmeta p { font-size: 0.7rem; color: var(--text-light); letter-spacing: 0.08em; margin-top: 0.2rem; }
+
+
+        /* ═══ SKINCARE SLIDER ═══ */
+        .skincare { padding: 8rem 3rem; background: var(--cream); overflow: hidden; }
+        .skincare-inner { max-width: 1000px; margin: 0 auto; }
+        .skincare-header { text-align: center; margin-bottom: 4rem; }
+        .skincare-header h2 { font-size: clamp(2.2rem,3.5vw,3rem); }
+        .skincare-header p { font-size: 0.88rem; color: var(--text-mid); font-weight: 300; max-width: 500px; margin: 1rem auto 0; line-height: 1.8; }
+        .slider-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; border: 1px solid var(--border); cursor: ew-resize; user-select: none; }
+        .slider-before, .slider-after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .slider-before { z-index: 1; }
+        .slider-after { clip-path: inset(0 50% 0 0); z-index: 2; }
+        .slider-lbl { position: absolute; bottom: 2rem; z-index: 5; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-mid); background: rgba(245,240,234,0.9); padding: 0.5rem 1.2rem; backdrop-filter: blur(5px); }
+        .slider-lbl-l { left: 2rem; }
+        .slider-lbl-r { right: 2rem; }
+        .slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: var(--white); z-index: 10; transform: translateX(-50%); }
+        .slider-knob {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            width: 44px; height: 44px; border-radius: 50%; background: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center;
+        }
+        .slider-knob svg { width: 18px; height: 18px; stroke: var(--dark); fill: none; stroke-width: 1.5; }
+        .slider-caption { text-align: center; margin-top: 2rem; font-size: 0.82rem; color: var(--text-light); font-style: italic; }
+
+        /* ═══ CASES ═══ */
+        .cases { padding: 8rem 3rem; background: var(--cream-dark); }
+        .cases-inner { max-width: 1000px; margin: 0 auto; }
+        .cases-header { text-align: center; margin-bottom: 4rem; }
+        .cases-header h2 { font-size: clamp(2.5rem,4vw,3.5rem); }
+        .case-item { border-top: 1px solid var(--border); overflow: hidden; }
+        .case-item:last-child { border-bottom: 1px solid var(--border); }
+        .case-trigger { width: 100%; padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: padding 0.4s; background: none; border: none; font-family: inherit; text-align: left; color: inherit; }
+        .case-trigger:hover { padding-left: 1rem; }
+        .ct-left { display: flex; align-items: center; gap: 2rem; }
+        .ct-num { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; color: var(--sand); min-width: 2.5rem; }
+        .ct-left h3 { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; font-weight: 400; }
+        .ct-arrow { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.4s; flex-shrink: 0; }
+        .ct-arrow svg { width: 14px; height: 14px; stroke: var(--text-mid); transition: transform 0.4s; }
+        .case-item.open .ct-arrow { background: var(--dark); border-color: var(--dark); }
+        .case-item.open .ct-arrow svg { stroke: var(--cream); transform: rotate(180deg); }
+        .case-body { max-height: 0; overflow: hidden; transition: max-height 0.6s ease; }
+        .case-item.open .case-body { max-height: 600px; }
+        .case-body-inner { padding: 0 0 2.5rem 4.5rem; }
+        .case-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem; padding: 1.5rem 0; }
+        .cm-val { font-family: 'Bodoni Moda', serif; font-size: 2rem; font-weight: 400; color: var(--dark); line-height: 1; text-align: center; }
+        .cm-label { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); margin-top: 0.3rem; text-align: center; }
+        .case-struct { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem; }
+        .case-struct h4 { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--leather); margin-bottom: 0.5rem; }
+        .case-struct p { font-size: 0.8rem; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
+        .ctags { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .ctag { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--leather); border: 1px solid var(--sand); padding: 0.3rem 0.9rem; }
+
+        /* ═══ TESTIMONIALS ═══ */
+        .testimonials { padding: 8rem 3rem; background: var(--cream); text-align: center; overflow: hidden; }
+        .testimonials-inner { max-width: 800px; margin: 0 auto; }
+        .testimonials-header { margin-bottom: 4rem; }
+        .testimonials-header h2 { font-size: clamp(2.2rem,3.5vw,3rem); }
+        .tcarousel { position: relative; min-height: 250px; }
+        .tslide { position: absolute; inset: 0; opacity: 0; transform: translateY(20px); transition: all 0.6s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .tslide.active { opacity: 1; transform: translateY(0); }
+        .tquote {
+            font-family: 'Bodoni Moda', serif; font-size: clamp(1.2rem,2.5vw,1.7rem);
+            font-weight: 400; font-style: italic; line-height: 1.6; color: var(--text); margin-bottom: 2rem; max-width: 650px;
+        }
+        .tquote::before { content: '\201C'; color: var(--sand); font-size: 3rem; display: block; margin-bottom: 0.5rem; line-height: 1; }
+        .tauthor { font-size: 0.82rem; font-weight: 500; }
+        .trole { font-size: 0.7rem; color: var(--text-light); margin-top: 0.2rem; }
+        .tdots { display: flex; gap: 0.75rem; justify-content: center; margin-top: 3rem; }
+        .tdot { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--sand); background: transparent; cursor: pointer; transition: all 0.3s; }
+        .tdot.active { background: var(--leather); border-color: var(--leather); }
+
+        /* ═══ BRANDS ═══ */
+        .brands { padding: 5rem 3rem; background: var(--cream-dark); text-align: center; }
+        .brands-row { display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; margin-top: 3rem; }
+        .brand-name { font-family: 'Bodoni Moda', serif; font-size: 1.4rem; font-weight: 400; color: var(--sand); letter-spacing: 0.06em; transition: color 0.4s; white-space: nowrap; }
+        .brand-name:hover { color: var(--dark); }
+
+        /* ═══ FAQ ═══ */
+        .faq { padding: 8rem 3rem; background: var(--cream); }
+        .faq-inner { max-width: 800px; margin: 0 auto; }
+        .faq-header { text-align: center; margin-bottom: 4rem; }
+        .faq-header h2 { font-size: clamp(2.2rem,3.5vw,3rem); }
+        .faq-header p { font-size: 0.88rem; color: var(--text-mid); font-weight: 300; max-width: 500px; margin: 1rem auto 0; line-height: 1.8; }
+        .faq-item { border-top: 1px solid var(--border); }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); }
+        .faq-q { width: 100%; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1rem; font-weight: 400; text-align: left; transition: color 0.3s; }
+        .faq-q:hover { color: var(--leather); }
+        .faq-icon { width: 24px; height: 24px; position: relative; flex-shrink: 0; }
+        .faq-icon::before, .faq-icon::after { content: ''; position: absolute; background: var(--text-mid); transition: transform 0.4s; }
+        .faq-icon::before { width: 14px; height: 1px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+        .faq-icon::after { width: 1px; height: 14px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+        .faq-item.open .faq-icon::after { transform: translate(-50%,-50%) rotate(90deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s; }
+        .faq-item.open .faq-a { max-height: 300px; }
+        .faq-a-inner { padding: 0 0 1.5rem; font-size: 0.85rem; font-weight: 300; color: var(--text-mid); line-height: 1.8; }
+
+        /* ═══ INSTAGRAM ═══ */
+        .insta { padding: 7rem 3rem; text-align: center; background: var(--cream-dark); }
+        .insta h2 { font-family: 'Bodoni Moda', serif; font-size: clamp(3rem,6vw,5rem); font-weight: 400; font-style: italic; margin-bottom: 1.5rem; }
+        .insta p { font-size: 0.85rem; color: var(--text-mid); font-weight: 300; margin-bottom: 2.5rem; }
+        .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem; margin-top: 5rem; }
+        .insta-cell { aspect-ratio: 1; overflow: hidden; position: relative; }
+        .insta-cell img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7) brightness(0.95); transition: all 0.6s; }
+        .insta-cell:hover img { filter: saturate(1) brightness(1); transform: scale(1.08); }
+
+        /* ═══ CONTACT ═══ */
+        .contact { padding: 8rem 3rem; background: var(--dark); position: relative; overflow: hidden; }
+        .contact-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Bodoni Moda', serif; font-size: clamp(8rem,20vw,20rem); font-weight: 400; color: rgba(255,255,255,0.025); white-space: nowrap; pointer-events: none; }
+        .contact-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+        .contact .stag { color: var(--leather-light); }
+        .contact .stag::before { background: var(--leather-light); }
+        .contact-left h2 { font-family: 'Bodoni Moda', serif; font-size: clamp(2.5rem,5vw,4rem); font-weight: 400; color: var(--cream); line-height: 1.1; margin-bottom: 1.5rem; }
+        .contact-left h2 em { font-style: italic; }
+        .contact-sub { font-size: 0.88rem; font-weight: 300; color: var(--text-light); line-height: 1.8; margin-bottom: 2.5rem; }
+        .contact-email { font-family: 'Bodoni Moda', serif; font-size: clamp(1.2rem,2vw,1.6rem); color: var(--cream); display: inline-block; position: relative; }
+        .contact-email::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1px; background: var(--leather); transition: background 0.3s; }
+        .contact-email:hover::after { background: var(--cream); }
+        .contact-socials { display: flex; gap: 2.5rem; margin-top: 2rem; }
+        .contact-socials a { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); transition: color 0.3s; }
+        .contact-socials a:hover { color: var(--cream); }
+
+        .cform { display: flex; flex-direction: column; gap: 1.5rem; }
+        .fg { display: flex; flex-direction: column; gap: 0.5rem; }
+        .fg label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); }
+        .fg input, .fg select, .fg textarea {
+            background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding: 0.8rem 0; font-family: 'Outfit', sans-serif; font-size: 0.88rem;
+            color: var(--cream); outline: none; transition: border-color 0.3s; resize: none;
+        }
+        .fg input::placeholder, .fg textarea::placeholder { color: var(--text-light); }
+        .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--leather); }
+        .fg select { appearance: none; cursor: pointer; }
+        .fg select option { background: var(--dark); color: var(--cream); }
+        .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .fsub {
+            margin-top: 1rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+            font-weight: 500; padding: 1.1rem 2.8rem; border: 1px solid var(--cream); color: var(--cream);
+            background: transparent; cursor: pointer; position: relative; overflow: hidden; transition: color 0.4s; align-self: flex-start;
+        }
+        .fsub::before { content: ''; position: absolute; inset: 0; background: var(--cream); transform: translateY(101%); transition: transform 0.4s ease; }
+        .fsub:hover { color: var(--dark); }
+        .fsub:hover::before { transform: translateY(0); }
+        .fsub span { position: relative; z-index: 1; }
+
+        /* ═══ FOOTER ═══ */
+        .footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 4rem 3rem 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .footer-brand h3 { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 1rem; }
+        .footer-brand p { font-size: 0.8rem; color: var(--text-light); font-weight: 300; line-height: 1.7; max-width: 300px; }
+        .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 1.5rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.75rem; }
+        .footer-col ul a { font-size: 0.8rem; color: var(--text-light); transition: color 0.3s; font-weight: 300; }
+        .footer-col ul a:hover { color: var(--cream); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding-top: 2rem; }
+        .footer-bottom span { font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-light); }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-right { min-height: 50vh; position: relative; }
+            .hero-left { padding: 8rem 3rem 3rem; }
+            .hero-image-overlay { background: linear-gradient(to bottom, var(--cream) 0%, transparent 30%); }
+            .masonry { columns: 2; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+            .process-steps::before { display: none; }
+            .service-row { grid-template-columns: 1fr; gap: 2rem; }
+            .service-row:nth-child(even) .service-content { order: 0; }
+            .showreel-layout { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .showreel-text { order: 1; }
+            .showreel-text p { margin-left: auto; margin-right: auto; }
+            .showreel-stats { justify-content: center; }
+            .showreel-vid { max-width: 280px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .cursor { display: none; }
+            .nav { padding: 1rem 1.5rem; }
+            .nav-links, .nav-cta { display: none; }
+            .nav-menu-btn { display: block; }
+            .hero-left { padding: 6rem 1.5rem 2rem; }
+            .hero-scroll { left: 1.5rem; }
+            .about { padding: 5rem 1.5rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image-accent { display: none; }
+            .about-stats { gap: 2rem; flex-wrap: wrap; }
+            .journey { padding: 4rem 1.5rem 5rem; }
+            .timeline { flex-direction: column; gap: 2rem; padding: 0; }
+            .timeline::before { display: none; }
+            .timeline-item { text-align: left; padding: 0; border-left: 2px solid var(--border); padding-left: 1.5rem; }
+            .timeline-item::before { display: none; }
+            .process { padding: 5rem 1.5rem; }
+            .process-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+            .portfolio { padding: 5rem 1.5rem; }
+            .masonry { columns: 1; }
+            .services { padding: 5rem 1.5rem; }
+            .showreel { padding: 6rem 1.5rem; }
+            .videos { padding: 5rem 1.5rem; }
+            .vgrid { grid-template-columns: 1fr; max-width: min(380px, 100%); margin: 0 auto; }
+            .videos-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+            .skincare { padding: 5rem 1.5rem; }
+            .cases { padding: 5rem 1.5rem; }
+            .ct-left { gap: 1rem; }
+            .case-body-inner { padding-left: 0; }
+            .case-metrics, .case-struct { grid-template-columns: 1fr; }
+            .testimonials { padding: 5rem 1.5rem; }
+            .brands-row { gap: 2rem; }
+            .brand-name { font-size: 1.1rem; }
+            .faq { padding: 5rem 1.5rem; }
+            .insta { padding: 5rem 1.5rem; }
+            .insta-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact { padding: 5rem 1.5rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .frow { grid-template-columns: 1fr; }
+            .footer { padding: 3rem 1.5rem 1.5rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .insta-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-stats { flex-direction: column; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="scroll-progress" id="sp"></div>
+<div class="page-grain" aria-hidden="true"></div>
+
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-monogram">JW</div>
+        <div class="loader-line"></div>
+        <div class="loader-sub">Model &middot; Content Creator &middot; London</div>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <a href="#top" class="nav-logo">Jessie Wang</a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#cases">Collaborations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mm">
+    <ul class="mobile-menu-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#cases">Collaborations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<!-- HERO: Split layout with image -->
+<section class="hero" id="top">
+    <div class="hero-left">
+        <div class="hero-eyebrow"><span>Model &middot; Content Creator &middot; London</span></div>
+        <h1 class="hero-title">
+            <span class="line hl1"><span>Jessie</span></span>
+            <span class="line hl2"><span>Wang</span></span>
+        </h1>
+        <p class="hero-sub">Model, content creator, and bilingual storyteller. Crafting elevated beauty and lifestyle content from London for the world.</p>
+        <div class="hero-cta-row">
+            <a href="#contact" class="btn"><span>Work With Me</span></a>
+            <a href="#portfolio" class="btn-ghost">View Portfolio</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="hero-image-container">
+            <img src="images/hero.jpg" alt="Jessie Wang">
+        </div>
+        <div class="hero-image-overlay"></div>
+        <div class="hero-image-grain"></div>
+    </div>
+    <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <div class="mtrack">
+        <div class="mitem"><span>Charlotte Tilbury</span><div class="mdot"></div><span>Lanc&ocirc;me</span><div class="mdot"></div><span>Canon</span><div class="mdot"></div><span>Le Chameau</span><div class="mdot"></div><span>Skincare</span><div class="mdot"></div><span>UGC</span><div class="mdot"></div><span>Luxury Events</span><div class="mdot"></div><span>K-Beauty</span><div class="mdot"></div><span>Bilingual EN/CN</span><div class="mdot"></div></div>
+        <div class="mitem"><span>Charlotte Tilbury</span><div class="mdot"></div><span>Lanc&ocirc;me</span><div class="mdot"></div><span>Canon</span><div class="mdot"></div><span>Le Chameau</span><div class="mdot"></div><span>Skincare</span><div class="mdot"></div><span>UGC</span><div class="mdot"></div><span>Luxury Events</span><div class="mdot"></div><span>K-Beauty</span><div class="mdot"></div><span>Bilingual EN/CN</span><div class="mdot"></div></div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="about-grid">
+        <div class="about-image rv">
+            <div class="about-image-inner">
+                <img src="images/about-portrait.jpg" alt="Jessie Wang" loading="lazy">
+                <div class="about-image-reveal"></div>
+            </div>
+            <div class="about-image-accent"></div>
+        </div>
+        <div class="about-text">
+            <div class="stag rv">About</div>
+            <h2 class="stitle rv d1">Content that <em>resonates,</em><br>stories that <em>stay</em></h2>
+            <p class="rv d2">London-based content creator and professional model with a sharp eye for skincare, beauty, and lifestyle storytelling. Colgate University graduate (Economics &amp; Psychology), bilingual in English and Mandarin, with an eye shaped by time at UCL and the LSE.</p>
+            <p class="rv d3">My modelling portfolio includes campaigns for Charlotte Tilbury, Lanc&ocirc;me, Le Chameau, and Canon. On the content side, I create everything from curated K-beauty campaigns to authentic UGC, always intentional, always elevated.</p>
+            <p class="rv d4">When I'm not in front of the camera, you'll find me deep in a skincare routine, lost in a bookshop, or planning the next trip somewhere warm.</p>
+            <div class="about-stats rv d4">
+                <div><div class="stat-val">London</div><div class="stat-label">Based In</div></div>
+                <div><div class="stat-val">EN / CN</div><div class="stat-label">Bilingual</div></div>
+                <div><div class="stat-val">Global</div><div class="stat-label">Reach</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey">
+    <div class="journey-inner">
+        <div class="journey-header rv">
+            <div class="stag">The Journey</div>
+            <h2 class="stitle">How I <em>got here</em></h2>
+        </div>
+        <div class="timeline rv d1">
+            <div class="timeline-item"><div class="timeline-year">I</div><div class="timeline-title">New York</div><div class="timeline-desc">Economics &amp; Psychology at Colgate University</div></div>
+            <div class="timeline-item"><div class="timeline-year">II</div><div class="timeline-title">London &amp; Shanghai</div><div class="timeline-desc">Exchanges at LSE and UCL, early professional experiences across Asia</div></div>
+            <div class="timeline-item"><div class="timeline-year">III</div><div class="timeline-title">London, For Good</div><div class="timeline-desc">Graduated with distinction, made London home</div></div>
+            <div class="timeline-item"><div class="timeline-year">IV</div><div class="timeline-title">Modelling &amp; Content</div><div class="timeline-desc">Major campaigns with Charlotte Tilbury, Lanc&ocirc;me, Canon</div></div>
+            <div class="timeline-item"><div class="timeline-year">V</div><div class="timeline-title">Full Creative</div><div class="timeline-desc">Luxury events, K-beauty partnerships, building a global content brand</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+    <div class="process-inner">
+        <div class="process-header rv">
+            <div class="stag">How It Works</div>
+            <h2 class="stitle">My <em>Process</em></h2>
+            <p>From first conversation to final deliverable.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step rv"><div class="step-num"><span>01</span></div><h3>Discovery</h3><p>We start with a conversation about your brand, goals, and audience. I want to understand what makes your product special.</p></div>
+            <div class="process-step rv d1"><div class="step-num"><span>02</span></div><h3>Concept</h3><p>I develop creative direction: moodboards, shot lists, messaging angles. Every piece of content has a clear purpose.</p></div>
+            <div class="process-step rv d2"><div class="step-num"><span>03</span></div><h3>Production</h3><p>Shooting and editing happens fast without cutting corners. I handle everything from styling to final colour grading.</p></div>
+            <div class="process-step rv d3"><div class="step-num"><span>04</span></div><h3>Delivery</h3><p>Final files optimised for each platform, with captions and posting recommendations. I stay available through launch.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO (Masonry) -->
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-inner">
+        <div class="portfolio-header rv">
+            <div class="stag">Selected Work</div>
+            <h2 class="stitle">Port<em>folio</em></h2>
+        </div>
+        <div class="masonry rv d1">
+            <div class="masonry-item"><img src="images/portfolio-1.jpg" alt="Wildflower editorial" loading="lazy"><div class="masonry-overlay"><h3>Wildflower</h3><p>Editorial &middot; Fantasy</p></div></div>
+            <div class="masonry-item"><img src="images/portfolio-3.jpg" alt="Behind the Lens" loading="lazy"><div class="masonry-overlay"><h3>Behind the Lens</h3><p>Canon &middot; Campaign</p></div></div>
+            <div class="masonry-item video-tile"><video src="video/loop-twilight.mp4" poster="images/portfolio-5.jpg" muted loop playsinline preload="metadata" aria-label="Twilight Ride live photo"></video><div class="live-badge" aria-hidden="true"><span></span>LIVE</div><div class="masonry-overlay"><h3>Twilight Ride</h3><p>Cinematic &middot; Lifestyle</p></div></div>
+            <div class="masonry-item video-tile"><video src="video/loop-nottinghill.mp4" poster="images/portfolio-4.jpg" muted loop playsinline preload="metadata" aria-label="Notting Hill live photo"></video><div class="live-badge" aria-hidden="true"><span></span>LIVE</div><div class="masonry-overlay"><h3>Notting Hill</h3><p>Street &middot; Lifestyle</p></div></div>
+            <div class="masonry-item"><img src="images/portfolio-6.jpg" alt="Studio swim" loading="lazy"><div class="masonry-overlay"><h3>Studio Swim</h3><p>Beauty &middot; Studio</p></div></div>
+            <div class="masonry-item"><img src="images/portfolio-2.jpg" alt="Style Korean" loading="lazy"><div class="masonry-overlay"><h3>Style Korean</h3><p>Skincare &middot; Brand</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWREEL -->
+<section class="showreel">
+    <div class="showreel-bg">SHOWREEL</div>
+    <div class="showreel-inner">
+        <div class="showreel-layout">
+            <div class="showreel-text">
+                <div class="stag rv">Watch</div>
+                <h2 class="stitle rv d1">The <em>Showreel</em></h2>
+                <p class="rv d2">Brand campaigns, skincare routines, UGC content, and behind-the-scenes moments. This is what working with me looks like.</p>
+                <div class="showreel-stats rv d3">
+                    <div><div class="showreel-stat-val">4</div><div class="showreel-stat-label">Brand Clips</div></div>
+                    <div><div class="showreel-stat-val">18s</div><div class="showreel-stat-label">Highlight Reel</div></div>
+                </div>
+            </div>
+            <div class="showreel-vid rv d2">
+                <video autoplay muted loop playsinline preload="metadata" poster="video/poster.jpg">
+                    <source src="video/showreel.mp4" type="video/mp4">
+                </video>
+                <div class="showreel-vid-overlay"></div>
+                <div class="showreel-badge">Showreel</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="services-inner">
+        <div class="services-header">
+            <div class="stag rv">What I Do</div>
+            <h2 class="stitle rv d1">Ser<em>vices</em></h2>
+        </div>
+
+        <div class="service-row rv">
+            <div class="service-visual">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs><linearGradient id="sg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4C8B8"/><stop offset="100%" stop-color="#A6895E" stop-opacity="0.4"/></linearGradient></defs>
+                    <rect width="400" height="300" fill="#EBE4DB"/>
+                    <rect x="40" y="40" width="180" height="220" rx="2" fill="none" stroke="#D4C8B8" stroke-width="1"/>
+                    <rect x="180" y="80" width="180" height="180" rx="2" fill="url(#sg1)" opacity="0.3"/>
+                    <circle cx="130" cy="130" r="30" fill="none" stroke="#8B6F47" stroke-width="0.5" opacity="0.4"/>
+                    <text x="200" y="290" font-family="'Bodoni Moda',serif" font-size="11" fill="#9B8E80" letter-spacing="3">UGC CONTENT</text>
+                </svg>
+            </div>
+            <div class="service-content">
+                <div class="snum">01</div>
+                <h3>UGC Content</h3>
+                <p>Authentic, scroll-stopping user-generated content crafted for your brand. Skincare routines, product demos, hauls, and lifestyle vignettes designed to drive engagement and conversions.</p>
+                <ul class="sfeatures"><li>Product Demos</li><li>Routines</li><li>Unboxings</li><li>Tutorials</li><li>Reviews</li></ul>
+            </div>
+        </div>
+
+        <div class="service-row rv">
+            <div class="service-visual">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="300" fill="#EBE4DB"/>
+                    <polygon points="160,80 280,150 160,220" fill="none" stroke="#8B6F47" stroke-width="0.8" opacity="0.3"/>
+                    <polygon points="170,90 270,150 170,210" fill="none" stroke="#A6895E" stroke-width="0.5" opacity="0.2"/>
+                    <rect x="100" y="130" width="200" height="2" fill="#D4C8B8" opacity="0.3"/>
+                    <text x="200" y="290" font-family="'Bodoni Moda',serif" font-size="11" fill="#9B8E80" letter-spacing="3" text-anchor="middle">VIDEO PRODUCTION</text>
+                </svg>
+            </div>
+            <div class="service-content">
+                <div class="snum">02</div>
+                <h3>Video Production</h3>
+                <p>Short-form video optimised for Instagram Reels, TikTok, and YouTube Shorts. Concept through final edit: scripting, shooting, and post-production.</p>
+                <ul class="sfeatures"><li>Reels</li><li>TikTok</li><li>Shorts</li><li>Editing</li><li>Scripting</li></ul>
+            </div>
+        </div>
+
+        <div class="service-row rv">
+            <div class="service-visual">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="300" fill="#EBE4DB"/>
+                    <circle cx="200" cy="150" r="80" fill="none" stroke="#D4C8B8" stroke-width="1"/>
+                    <circle cx="200" cy="150" r="60" fill="none" stroke="#A6895E" stroke-width="0.5" opacity="0.4"/>
+                    <circle cx="200" cy="150" r="40" fill="#A6895E" opacity="0.08"/>
+                    <line x1="200" y1="70" x2="200" y2="230" stroke="#8B6F47" stroke-width="0.3" opacity="0.3"/>
+                    <line x1="120" y1="150" x2="280" y2="150" stroke="#8B6F47" stroke-width="0.3" opacity="0.3"/>
+                    <text x="200" y="290" font-family="'Bodoni Moda',serif" font-size="11" fill="#9B8E80" letter-spacing="3" text-anchor="middle">BRAND PARTNERSHIPS</text>
+                </svg>
+            </div>
+            <div class="service-content">
+                <div class="snum">03</div>
+                <h3>Brand Partnerships</h3>
+                <p>Strategic, long-term collaborations with beauty and lifestyle brands. From product launches to seasonal ambassadorships and affiliate programmes.</p>
+                <ul class="sfeatures"><li>Campaigns</li><li>Ambassadorships</li><li>Launches</li><li>Affiliates</li></ul>
+            </div>
+        </div>
+
+        <div class="service-row rv">
+            <div class="service-visual">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="300" fill="#EBE4DB"/>
+                    <rect x="120" y="50" width="160" height="200" rx="2" fill="none" stroke="#D4C8B8" stroke-width="1"/>
+                    <rect x="140" y="70" width="120" height="160" fill="#A6895E" opacity="0.06"/>
+                    <ellipse cx="200" cy="120" rx="25" ry="30" fill="none" stroke="#8B6F47" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="160" y1="175" x2="240" y2="175" stroke="#D4C8B8" stroke-width="0.5"/>
+                    <line x1="170" y1="190" x2="230" y2="190" stroke="#D4C8B8" stroke-width="0.5"/>
+                    <text x="200" y="290" font-family="'Bodoni Moda',serif" font-size="11" fill="#9B8E80" letter-spacing="3" text-anchor="middle">MODELLING</text>
+                </svg>
+            </div>
+            <div class="service-content">
+                <div class="snum">04</div>
+                <h3>Modelling</h3>
+                <p>Editorial and commercial work for fashion, beauty, and lifestyle. Clients include Charlotte Tilbury, Lanc&ocirc;me, Le Chameau, and Canon. Clean aesthetic, natural versatility.</p>
+                <ul class="sfeatures"><li>Editorial</li><li>Commercial</li><li>Lookbook</li><li>E-Commerce</li></ul>
+            </div>
+        </div>
+
+        <div class="service-row rv">
+            <div class="service-visual">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="300" fill="#EBE4DB"/>
+                    <circle cx="160" cy="130" r="50" fill="none" stroke="#D4C8B8" stroke-width="0.8"/>
+                    <circle cx="240" cy="170" r="50" fill="none" stroke="#A6895E" stroke-width="0.5" opacity="0.4"/>
+                    <circle cx="200" cy="150" r="20" fill="#A6895E" opacity="0.1"/>
+                    <text x="200" y="290" font-family="'Bodoni Moda',serif" font-size="11" fill="#9B8E80" letter-spacing="3" text-anchor="middle">SKINCARE REVIEWS</text>
+                </svg>
+            </div>
+            <div class="service-content">
+                <div class="snum">05</div>
+                <h3>Skincare Reviews</h3>
+                <p>In-depth, honest product reviews and routine content. A trusted voice in K-beauty and modern skincare. Genuine recommendations that audiences trust.</p>
+                <ul class="sfeatures"><li>K-Beauty</li><li>Reviews</li><li>Routines</li><li>Before/After</li></ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos" id="videos">
+    <div class="videos-inner">
+        <div class="videos-header">
+            <div><div class="stag rv">Video Content</div><h2 class="stitle rv d1">Latest <em>Videos</em></h2></div>
+            <a href="https://instagram.com/jessieyoyo_" target="_blank" rel="noopener" class="rv d2">View All &rarr;</a>
+        </div>
+        <div class="vtabs rv">
+            <button class="vtab active" data-f="all">All</button>
+            <button class="vtab" data-f="brand">Brand Work</button>
+            <button class="vtab" data-f="personal">Personal</button>
+            <button class="vtab" data-f="skincare">Skincare</button>
+        </div>
+        <div class="vgrid">
+            <div class="vcard rv" data-c="brand skincare"><div class="vthumb"><img src="images/video-1.jpg" alt="Skincare box" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>Skincare Box Unboxing</h4><p>Style Korean &middot; Brand Partnership</p></div></div>
+            <div class="vcard rv d1" data-c="brand"><div class="vthumb"><img src="images/video-2.jpg" alt="Palmaae" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>Palmaae Campaign</h4><p>Brand Video &middot; UGC</p></div></div>
+            <div class="vcard rv d2" data-c="personal"><div class="vthumb"><img src="images/video-3.jpg" alt="GRWM" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>Get Ready With Me</h4><p>Original &middot; Lifestyle</p></div></div>
+            <div class="vcard rv" data-c="skincare"><div class="vthumb"><img src="images/video-4.jpg" alt="Retinol" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>Retinol Eye Roller</h4><p>Dr. Althea &middot; Skincare</p></div></div>
+            <div class="vcard rv d1" data-c="personal"><div class="vthumb"><img src="images/video-5.jpg" alt="Lisbon" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>Lisbon Travel Diary</h4><p>Original &middot; Travel</p></div></div>
+            <div class="vcard rv d2" data-c="skincare brand"><div class="vthumb"><img src="images/video-6.jpg" alt="PDRN" loading="lazy"><div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg></div></div><div class="vmeta"><h4>PDRN Cream Spotlight</h4><p>Centellian24 &middot; K-Beauty</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- SKINCARE SLIDER -->
+<section class="skincare">
+    <div class="skincare-inner">
+        <div class="skincare-header rv">
+            <div class="stag">Skincare Content</div>
+            <h2 class="stitle">Real routines,<br><em>real results</em></h2>
+            <p>Honest, science-informed reviews that audiences actually trust. Drag the slider.</p>
+        </div>
+        <div class="slider-wrap rv d1" id="skinSlider">
+            <div class="slider-before" style="background:linear-gradient(135deg,#DED6CE,#C4B8AA,#B8A99A)"><div class="slider-lbl slider-lbl-l">Before Routine</div></div>
+            <div class="slider-after" id="sliderAfter" style="background:linear-gradient(135deg,#E8D5C4,#F5DCC8,#FBE8D8)"><div class="slider-lbl slider-lbl-r">After 4 Weeks</div></div>
+            <div class="slider-handle" id="sliderHandle"><div class="slider-knob"><svg viewBox="0 0 24 24"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div></div>
+        </div>
+        <p class="slider-caption rv d2">"The most engaging skincare content shows real transformation."</p>
+    </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+    <div class="cases-inner">
+        <div class="cases-header"><div class="stag rv">Collaborations</div><h2 class="stitle rv d1">Case <em>Studies</em></h2></div>
+        <div>
+            <div class="case-item rv"><button class="case-trigger" onclick="toggleCase(this)" aria-expanded="false"><div class="ct-left"><span class="ct-num">01</span><h3>Style Korean Global</h3></div><div class="ct-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div></button><div class="case-body"><div class="case-body-inner"><div class="case-metrics"><div><div class="cm-val">$69</div><div class="cm-label">Box Price</div></div><div><div class="cm-val">Jessie15</div><div class="cm-label">Exclusive Code</div></div><div><div class="cm-val">Multi</div><div class="cm-label">Platform</div></div></div><div class="case-struct"><div><h4>Challenge</h4><p>Launch a curated skincare box to a Western audience unfamiliar with K-beauty routines.</p></div><div><h4>Approach</h4><p>Unboxing video with product demos, personal code, multi-story rollout.</p></div><div><h4>Result</h4><p>High engagement, authentic conversion through personalised code, ongoing relationship.</p></div></div><div class="ctags"><span class="ctag">UGC</span><span class="ctag">Skincare</span><span class="ctag">Video</span><span class="ctag">Affiliate</span></div></div></div></div>
+
+            <div class="case-item rv d1"><button class="case-trigger" onclick="toggleCase(this)" aria-expanded="false"><div class="ct-left"><span class="ct-num">02</span><h3>Palmaae</h3></div><div class="ct-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div></button><div class="case-body"><div class="case-body-inner"><div class="case-metrics"><div><div class="cm-val">5+</div><div class="cm-label">Videos</div></div><div><div class="cm-val">Reels</div><div class="cm-label">Format</div></div><div><div class="cm-val">Ongoing</div><div class="cm-label">Relationship</div></div></div><div class="case-struct"><div><h4>Challenge</h4><p>Build awareness for a rising lifestyle brand through aspirational content.</p></div><div><h4>Approach</h4><p>Multi-video series blending travel aesthetics with natural product integration.</p></div><div><h4>Result</h4><p>Suite of evergreen assets, increased following, repeat collaboration.</p></div></div><div class="ctags"><span class="ctag">Brand</span><span class="ctag">Video</span><span class="ctag">Multi-Part</span></div></div></div></div>
+
+            <div class="case-item rv d2"><button class="case-trigger" onclick="toggleCase(this)" aria-expanded="false"><div class="ct-left"><span class="ct-num">03</span><h3>Dr. Althea Global</h3></div><div class="ct-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div></button><div class="case-body"><div class="case-body-inner"><div class="case-struct"><div><h4>Challenge</h4><p>Feature a retinol eye product naturally, not forced.</p></div><div><h4>Approach</h4><p>Integrated within a full skincare routine, demonstrating real morning usage.</p></div><div><h4>Result</h4><p>High save rate, strong DM engagement, educational value.</p></div></div><div class="ctags"><span class="ctag">Skincare</span><span class="ctag">Product Feature</span><span class="ctag">Routine</span></div></div></div></div>
+
+            <div class="case-item rv d3"><button class="case-trigger" onclick="toggleCase(this)" aria-expanded="false"><div class="ct-left"><span class="ct-num">04</span><h3>Centellian24</h3></div><div class="ct-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div></button><div class="case-body"><div class="case-body-inner"><div class="case-struct"><div><h4>Challenge</h4><p>Educate non-Korean audience on PDRN technology.</p></div><div><h4>Approach</h4><p>Hero product in curated routine with educational ingredient content.</p></div><div><h4>Result</h4><p>Strongest engagement on ingredient education, audience retention.</p></div></div><div class="ctags"><span class="ctag">K-Beauty</span><span class="ctag">Review</span><span class="ctag">Educational</span></div></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="testimonials-inner">
+        <div class="testimonials-header"><div class="stag rv">Kind Words</div><h2 class="stitle rv d1">What brands <em>say</em></h2></div>
+        <div class="tcarousel rv d2" id="tc">
+            <div class="tslide active"><div class="tquote">Jessie understood our brand from the first call. The content she delivered exceeded every expectation: authentic, elevated, and ready to post.</div><div class="tauthor">Style Korean Global</div><div class="trole">Brand Partnerships Team</div></div>
+            <div class="tslide"><div class="tquote">Working with Jessie felt effortless. She brought creative ideas we hadn't considered, and every deliverable was on time and on-brand.</div><div class="tauthor">Palmaae</div><div class="trole">Marketing Director</div></div>
+            <div class="tslide"><div class="tquote">Her audience genuinely trusts her recommendations. The engagement on our feature was unlike anything we'd seen from other creators.</div><div class="tauthor">Dr. Althea Global</div><div class="trole">Influencer Relations</div></div>
+        </div>
+        <div class="tdots rv d3" id="td">
+            <button class="tdot active" data-i="0" aria-label="Testimonial 1"></button>
+            <button class="tdot" data-i="1" aria-label="Testimonial 2"></button>
+            <button class="tdot" data-i="2" aria-label="Testimonial 3"></button>
+        </div>
+    </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands">
+    <div class="stag rv">Trusted By</div>
+    <div class="brands-row rv d1">
+        <span class="brand-name">Charlotte Tilbury</span>
+        <span class="brand-name">Lanc&ocirc;me</span>
+        <span class="brand-name">Canon</span>
+        <span class="brand-name">Le Chameau</span>
+        <span class="brand-name">Style Korean</span>
+        <span class="brand-name">Dr. Althea</span>
+        <span class="brand-name">Centellian24</span>
+        <span class="brand-name">Palmaae</span>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="faq-inner">
+        <div class="faq-header"><div class="stag rv">FAQ</div><h2 class="stitle rv d1">Working <em>with me</em></h2><p class="rv d2">Everything you need to know before we collaborate.</p></div>
+        <div>
+            <div class="faq-item rv"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>What types of brands do you work with?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Primarily skincare, beauty, and lifestyle brands, from indie K-beauty labels to established global names. Also open to fashion, travel, and wellness brands that align with my aesthetic.</div></div></div>
+            <div class="faq-item rv d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>What's your typical turnaround time?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Most projects are delivered within 7–14 days from brief approval. UGC and single-post content can be faster. Rush delivery available for an additional fee.</div></div></div>
+            <div class="faq-item rv d2"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>What are your rates?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Rates depend on deliverables, usage rights, and exclusivity. I offer packages for single videos, multi-post campaigns, and long-term partnerships. Get in touch for a tailored quote.</div></div></div>
+            <div class="faq-item rv d3"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Do you handle everything yourself?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Yes: concept, styling, shooting, editing, and delivery. For larger productions, I work with trusted collaborators for hair, makeup, and photography.</div></div></div>
+            <div class="faq-item rv d4"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>What about usage rights?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Standard packages include organic social usage. Paid advertising rights, whitelisting, and exclusivity are priced separately. Everything agreed upfront.</div></div></div>
+            <div class="faq-item rv"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Can I request revisions?</span><div class="faq-icon"></div></button><div class="faq-a"><div class="faq-a-inner">Every project includes one round of revisions at no extra cost. Because I invest heavily in the brief phase, major revisions are rare.</div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta">
+    <h2 class="rv">@jessieyoyo_</h2>
+    <p class="rv d1">Follow the journey on Instagram</p>
+    <a href="https://instagram.com/jessieyoyo_" target="_blank" rel="noopener" class="btn rv d2"><span>Follow on Instagram</span></a>
+    <div class="insta-grid rv d3">
+        <div class="insta-cell"><img src="images/insta-1.jpg" alt="Instagram post" loading="lazy"></div>
+        <div class="insta-cell"><img src="images/insta-2.jpg" alt="Instagram post" loading="lazy"></div>
+        <div class="insta-cell"><img src="images/insta-3.jpg" alt="Instagram post" loading="lazy"></div>
+        <div class="insta-cell"><img src="images/insta-4.jpg" alt="Instagram post" loading="lazy"></div>
+        <div class="insta-cell"><img src="images/insta-5.jpg" alt="Instagram post" loading="lazy"></div>
+        <div class="insta-cell"><img src="images/insta-6.jpg" alt="Instagram post" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="contact-bg">JESSIE</div>
+    <div class="contact-inner">
+        <div class="contact-grid">
+            <div class="contact-left">
+                <div class="stag rv">Get In Touch</div>
+                <h2 class="rv d1">Let's create<br>something <em>beautiful</em></h2>
+                <p class="contact-sub rv d2">Open to brand collaborations, modelling opportunities, and content partnerships. Whether you have a clear brief or just an idea, let's talk.</p>
+                <a href="mailto:hello@jessiewang.com" class="contact-email rv d3">hello@jessiewang.com</a>
+                <div class="contact-socials rv d4">
+                    <a href="https://instagram.com/jessieyoyo_" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://tiktok.com/@jessieyoyo_" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+            <div class="cform rv d2">
+                <div class="frow"><div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"></div><div class="fg"><label>Brand / Company</label><input type="text" placeholder="Company name"></div></div>
+                <div class="frow"><div class="fg"><label>Project Type</label><select><option value="" disabled selected>Select type</option><option>UGC Content</option><option>Video Production</option><option>Brand Partnership</option><option>Modelling</option><option>Skincare Review</option><option>Other</option></select></div><div class="fg"><label>Budget Range</label><select><option value="" disabled selected>Select range</option><option>Under &pound;500</option><option>&pound;500 – &pound;1,500</option><option>&pound;1,500 – &pound;5,000</option><option>&pound;5,000+</option><option>Let's discuss</option></select></div></div>
+                <div class="fg"><label>Your Project</label><textarea rows="4" placeholder="Brief description, timeline, platforms..."></textarea></div>
+                <button type="button" class="fsub" onclick="handleForm()"><span>Send Enquiry</span></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand"><h3>Jessie Wang</h3><p>London-based model and content creator. Elevated skincare, beauty, and lifestyle content for brands that care about quality.</p></div>
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#services">Services</a></li><li><a href="#videos">Videos</a></li><li><a href="#cases">Collaborations</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://instagram.com/jessieyoyo_" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://tiktok.com/@jessieyoyo_" target="_blank" rel="noopener">TikTok</a></li><li><a href="mailto:hello@jessiewang.com">Email</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Jessie Wang. All rights reserved.</span><span>London, UK</span></div>
+</footer>
+
+<script>
+// Loader
+window.addEventListener('load',()=>{setTimeout(()=>{const l=document.getElementById('loader');l.classList.add('done');setTimeout(()=>l.remove(),800)},2200)});
+
+// Scroll progress
+window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('sp').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%'});
+
+// Cursor (skip on touch devices)
+const cur=document.getElementById('cursor');let mx=0,my=0,cx=0,cy=0;
+if(window.matchMedia('(pointer:fine)').matches){
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function l(){cx+=(mx-cx)*0.15;cy+=(my-cy)*0.15;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(l)})();
+document.querySelectorAll('a,button,.masonry-item,.video-tile,.vcard,.case-trigger,.faq-q,.showreel-vid').forEach(e=>{e.addEventListener('mouseenter',()=>cur.classList.add('h'));e.addEventListener('mouseleave',()=>cur.classList.remove('h'))});
+}
+
+// Nav
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>80));
+const mb=document.getElementById('menuBtn'),mm=document.getElementById('mm');
+mb.addEventListener('click',()=>{mb.classList.toggle('open');mm.classList.toggle('open');const isOpen=mm.classList.contains('open');document.body.style.overflow=isOpen?'hidden':'';mb.setAttribute('aria-expanded',isOpen)});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mb.classList.remove('open');mm.classList.remove('open');document.body.style.overflow=''}));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})})});
+
+// Reveals
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(e=>ro.observe(e));
+
+// About image reveal
+const ai=document.querySelector('.about-image');
+if(ai)new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('revealed')}),{threshold:0.3}).observe(ai);
+
+// Case accordion
+function toggleCase(t){const i=t.parentElement;const o=i.classList.contains('open');document.querySelectorAll('.case-item').forEach(x=>{x.classList.remove('open');x.querySelector('.case-trigger').setAttribute('aria-expanded','false')});if(!o){i.classList.add('open');t.setAttribute('aria-expanded','true')}}
+
+// FAQ
+function toggleFaq(b){const i=b.parentElement;const o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!o){i.classList.add('open');b.setAttribute('aria-expanded','true')}}
+
+// Testimonials
+const slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.tdot');
+let cs=0,ti;
+function ss(i){slides.forEach(s=>s.classList.remove('active'));dots.forEach(d=>d.classList.remove('active'));slides[i].classList.add('active');dots[i].classList.add('active');cs=i}
+function startAuto(){clearInterval(ti);ti=setInterval(()=>ss((cs+1)%slides.length),5000)}
+dots.forEach(d=>d.addEventListener('click',()=>{ss(+d.dataset.i);startAuto()}));
+startAuto();
+
+// Pause showreel for reduced-motion users
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){const v=document.querySelector('.showreel video');if(v){v.pause();v.removeAttribute('autoplay')}}
+
+// Live Photo hover loops on portfolio video tiles
+const reduceMo=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.video-tile').forEach(tile=>{
+  const v=tile.querySelector('video');if(!v)return;
+  if(reduceMo)return;
+  tile.addEventListener('mouseenter',()=>{v.play().catch(()=>{})});
+  tile.addEventListener('mouseleave',()=>{v.pause();v.currentTime=0});
+  // Touch fallback: autoplay when scrolled into view
+  if(!window.matchMedia('(pointer:fine)').matches){
+    new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{threshold:0.6}).observe(tile);
+  }
+});
+
+// Video tabs
+document.querySelectorAll('.vtab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.vtab').forEach(x=>x.classList.remove('active'));t.classList.add('active');const f=t.dataset.f;document.querySelectorAll('.vcard').forEach(c=>{if(f==='all'||c.dataset.c.includes(f)){c.style.display='';c.style.opacity='1';c.style.transform=''}else{c.style.opacity='0.15';c.style.transform='scale(0.96)'}})})});
+
+// Slider
+const sl=document.getElementById('skinSlider'),sh=document.getElementById('sliderHandle'),sa=document.getElementById('sliderAfter');
+let dr=false;
+function us(x){const r=sl.getBoundingClientRect();let p=Math.max(0,Math.min(100,((x-r.left)/r.width)*100));sh.style.left=p+'%';sa.style.clipPath=`inset(0 ${100-p}% 0 0)`}
+sl.addEventListener('mousedown',e=>{dr=true;us(e.clientX)});
+document.addEventListener('mousemove',e=>{if(dr)us(e.clientX)});
+document.addEventListener('mouseup',()=>dr=false);
+sl.addEventListener('touchstart',e=>{dr=true;us(e.touches[0].clientX)},{passive:true});
+document.addEventListener('touchmove',e=>{if(dr)us(e.touches[0].clientX)},{passive:true});
+document.addEventListener('touchend',()=>dr=false);
+
+// Form
+function handleForm(){const ins=document.querySelectorAll('.cform input');const sels=document.querySelectorAll('.cform select');const ta=document.querySelector('.cform textarea');const n=ins[0]?ins[0].value:'';const b=ins[1]?ins[1].value:'';const pt=sels[0]?sels[0].value:'';const br=sels[1]?sels[1].value:'';const msg=ta?ta.value:'';const s=`Collaboration Enquiry from ${n}`;const body=`Name: ${n}\nBrand/Company: ${b}\nProject Type: ${pt}\nBudget Range: ${br}\n\nMessage:\n${msg}`;window.location.href=`mailto:hello@jessiewang.com?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(body)}`}
+</script>
+
+</body>
+</html>
